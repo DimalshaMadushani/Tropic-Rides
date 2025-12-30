@@ -19,7 +19,7 @@ export default function CarRentPage() {
               key={c.id}
               title={c.name}
               subtitle={`${c.passengers} passengers • ${c.description}`}
-              imageSrc={c.imageUrls[0]}
+              imageSrc={c.image}
               meta={`$${c.pricePerDayUSD}/day`}
             />
           ))}

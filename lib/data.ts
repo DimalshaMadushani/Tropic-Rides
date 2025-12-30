@@ -1,3 +1,5 @@
+import image from "next/image";
+
 export type ServiceKey = "scooter" | "airport" | "tour" | "car";
 
 export type Category = {
@@ -81,7 +83,7 @@ export type Car = {
   passengers: number;
   description: string;
   pricePerDayUSD: number;
-  imageUrls: string[];
+  image: string;
 };
 
 export const cars: Car[] = [
@@ -91,10 +93,7 @@ export const cars: Car[] = [
     passengers: 3,
     description: "Luggage and surfboard allowed.",
     pricePerDayUSD: 100,
-    imageUrls: [
-      "https://media.ed.edmunds-media.com/honda/insight/2019/oem/2019_honda_insight_sedan_touring_fq_oem_9_815x543.jpg",
-      "https://carsguide.ikman.lk/wp-content/uploads/2023/10/Honda-Fit-Shuttle-2013-1.png",
-    ],
+    image:"/images/cars/car1.jpeg",
   },
   {
     id: "c2",
@@ -102,21 +101,16 @@ export const cars: Car[] = [
     passengers: 4,
     description: "Comfort ride with good fuel economy.",
     pricePerDayUSD: 150,
-    imageUrls: [
-      "https://media.ed.edmunds-media.com/honda/insight/2019/oem/2019_honda_insight_sedan_touring_fq_oem_9_815x543.jpg",
-      "https://www.motortrend.com/uploads/2022/03/2022-Toyota-Sienna-Platinum-10.jpg?w=768&width=768&q=75&format=webp",
-    ],
+    image:"/images/cars/car3-red.jpeg",
   },
+
   {
     id: "c3",
     name: "Luxury Hybrid Van",
     passengers: 8,
     description: "Space for 8 passengers plus luggage.",
     pricePerDayUSD: 300,
-    imageUrls: [
-      "https://www.motortrend.com/uploads/2022/03/2022-Toyota-Sienna-Platinum-10.jpg?w=768&width=768&q=75&format=webp",
-      "https://carsguide.ikman.lk/wp-content/uploads/2023/10/Honda-Fit-Shuttle-2013-1.png",
-    ],
+    image:"/images/cars/van1.jpeg",
   },
 ];
 
