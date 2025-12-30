@@ -61,7 +61,7 @@ export default function AirportTransfersPage() {
                       ⚡
                     </span>
                     <span className="text-xs font-medium text-slate-700">
-                      Ride within minutes
+                      Confirm within minutes
                     </span>
                   </div>
                 </div>

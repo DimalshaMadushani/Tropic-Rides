@@ -35,7 +35,7 @@ export function ItemCard({
             <p className="mt-1 text-sm text-slate-600">{subtitle}</p>
           </div>
           {meta ? (
-            <div className="rounded-xl bg-sand-100 px-3 py-1 text-xs font-semibold text-slate-700">
+            <div className="rounded-xl bg-sand-100 px-3 py-1 text-xs font-semibold text-slate-700 text-center">
               {meta}
             </div>
           ) : null}

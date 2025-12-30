@@ -23,4 +23,4 @@ npm run dev
   - `components/WhatsAppFab.tsx`
   - `app/contact-us/page.tsx`
 
-- Images from your original project are placed in `public/images/`.
+- Images from your original project are placed in `public/`.

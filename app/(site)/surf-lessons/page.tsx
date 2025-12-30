@@ -116,7 +116,7 @@ export default function SurfLessonsPage() {
                 {/* Background image */}
                 <div
                   className="absolute inset-0 bg-cover bg-center"
-                  style={{ backgroundImage: "url(/images/surf-lessons.jpeg)" }}
+                  style={{ backgroundImage: "url(/surf_lessons/book_surf.webp)" }}
                   aria-hidden="true"
                 />
 

@@ -139,7 +139,7 @@ export default function ContactPage() {
           <div className="relative overflow-hidden rounded-3xl bg-white shadow-card ring-1 ring-slate-200/60">
             <div className="relative h-[360px] w-full sm:h-[520px]">
               <Image
-                src="/images/contactUs_image.webp"
+                src="/contact/contact_us.webp"
                 alt="Contact Tropic Rides"
                 fill
                 className="object-cover"

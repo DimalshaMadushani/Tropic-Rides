@@ -48,7 +48,7 @@ export default function AboutPage() {
           <div className="relative overflow-hidden rounded-3xl bg-white shadow-card ring-1 ring-slate-200/60">
             <div className="relative h-[320px] w-full sm:h-[420px]">
               <Image
-                src="/images/aboutUs_image.jpg"
+                src="/about/about_us.webp"
                 alt="Traveling in Sri Lanka with Tropic Rides"
                 fill
                 className="object-cover"

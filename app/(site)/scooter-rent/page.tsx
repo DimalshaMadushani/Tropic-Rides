@@ -4,8 +4,8 @@ import { scooters } from "@/lib/data";
 import { ItemCard } from "@/components/ItemCard";
 import { WHATSAPP_NUMBER, WHATSAPP_SCOOTERS_TEXT } from "@/lib/constants";
 
-function formatPrice(price: number) {
-  return Number.isInteger(price) ? price.toString() : price.toFixed(1);
+function formatPrice(value: number): string {
+  return value.toFixed(2);
 }
 
 export default function ScooterRentPage() {
