@@ -2,12 +2,7 @@ import { Container } from "@/components/Container";
 import { SectionHeading } from "@/components/SectionHeading";
 import { scooters } from "@/lib/data";
 import { ItemCard } from "@/components/ItemCard";
-
-const WHATSAPP_NUMBER = "94751234567";
-const WHATSAPP_TEXT_DELIVERY = encodeURIComponent(
-  "Hi Tropic Rides! I want scooter delivery."
-);
-const WHATSAPP_LINK_DELIVERY = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_TEXT_DELIVERY}`;
+import { WHATSAPP_NUMBER, WHATSAPP_SCOOTERS_TEXT } from "@/lib/constants";
 
 function formatPrice(price: number) {
   return Number.isInteger(price) ? price.toString() : price.toFixed(1);
@@ -40,13 +35,13 @@ export default function ScooterRentPage() {
               </div>
 
               <a
-                href={WHATSAPP_LINK_DELIVERY}
+                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_SCOOTERS_TEXT}`}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-ocean-600 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-ocean-600/15 transition hover:bg-ocean-700 sm:w-auto"
               >
                 <span aria-hidden>💬</span>
-                WhatsApp to book delivery
+                Rent a scooter
               </a>
             </div>
 

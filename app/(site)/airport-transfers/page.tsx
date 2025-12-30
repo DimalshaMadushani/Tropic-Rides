@@ -3,12 +3,7 @@ import { Container } from "@/components/Container";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ItemCard } from "@/components/ItemCard";
 import { airportTransfers } from "@/lib/data";
-
-const WHATSAPP_NUMBER = "94755350828";
-const WHATSAPP_TEXT = encodeURIComponent(
-  "Hi Tropic Rides! I need an airport transfer."
-);
-const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_TEXT}`;
+import { WHATSAPP_NUMBER, WHATSAPP_AIRPORT_TEXT } from "@/lib/constants";
 
 export default function AirportTransfersPage() {
   return (
@@ -79,13 +74,13 @@ export default function AirportTransfersPage() {
 
               <div className="sm:flex sm:justify-end">
                 <a
-                  href={WHATSAPP_LINK}
+                  href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_AIRPORT_TEXT}`}
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-ocean-600 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-ocean-600/15 transition hover:bg-ocean-700 sm:w-auto"
                 >
                   <span aria-hidden>💬</span>
-                  WhatsApp for a quote
+                  Book your transfer
                 </a>
               </div>
             </div>

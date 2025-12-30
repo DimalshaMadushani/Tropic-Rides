@@ -7,14 +7,27 @@ import { categories } from "@/lib/data";
 import { CheckCircle2, MapPinned, ShieldCheck, Timer } from "lucide-react";
 import Link from "next/link";
 import { FAQ } from "@/components/FAQ";
+import { HERO_BLUR } from "@/lib/constants";
+import { WHATSAPP_NUMBER, WHATSAPP_HOME_TEXT } from "@/lib/constants";
 
 const perks = [
   { icon: Timer, title: "Fast booking", text: "Confirm quickly on WhatsApp." },
-  { icon: ShieldCheck, title: "Clean & safe", text: "Well-maintained vehicles." },
-  { icon: MapPinned, title: "Local support", text: "Tips for routes and stops." },
-  { icon: CheckCircle2, title: "Straightforward pricing", text: "Clear day rates." },
+  {
+    icon: ShieldCheck,
+    title: "Clean & safe",
+    text: "Well-maintained vehicles.",
+  },
+  {
+    icon: MapPinned,
+    title: "Local support",
+    text: "Tips for routes and stops.",
+  },
+  {
+    icon: CheckCircle2,
+    title: "Straightforward pricing",
+    text: "Clear day rates.",
+  },
 ];
-
 
 export default function HomePage() {
   return (
@@ -35,18 +48,20 @@ export default function HomePage() {
               Scooters, surf lessons, transfers, and tours made easy
             </h1>
             <p className="mt-4 text-base leading-relaxed text-slate-600">
-              Book in minutes. Get a scooter delivered, learn to surf with local instructors, arrange airport pickup, or explore the area with guided tours.
+              Book in minutes. Get a scooter delivered, learn to surf with local
+              instructors, arrange airport pickup, or explore the area with
+              guided tours.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
               <Button
-                href="https://wa.me/94755350828"
+                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_HOME_TEXT}`}
                 target="_blank"
                 rel="noreferrer"
               >
                 Book on WhatsApp
               </Button>
-              <Button href="tel:+94755350828" variant="secondary">
+              <Button href={`tel:+${WHATSAPP_NUMBER}`} variant="secondary">
                 Call Now
               </Button>
               <Button href="#services" variant="ghost">
@@ -79,17 +94,11 @@ export default function HomePage() {
                   fill
                   className="object-cover"
                   priority
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  placeholder="blur"
+                  blurDataURL={HERO_BLUR}
                 />
               </div>
-              {/* <div className="p-5">
-                <p className="text-sm font-semibold text-slate-900">
-                  Travel-ready support
-                </p>
-                <p className="mt-1 text-sm text-slate-600">
-                  Message us your dates and location. We will confirm and guide
-                  you.
-                </p>
-              </div> */}
             </div>
           </div>
         </Container>
@@ -156,27 +165,6 @@ export default function HomePage() {
           </div>
         </Container>
       </section>
-
-      {/* <section className="py-14">
-        <Container>
-          <SectionHeading
-            eyebrow="Testimonials"
-            title="What people say"
-            subtitle="A few short notes from travelers. Replace these with your real feedback anytime."
-          />
-          <div className="mt-8 grid gap-5 md:grid-cols-3">
-            {testimonials.map((t) => (
-              <Card key={t.name} className="p-5">
-                <p className="text-sm font-semibold text-slate-900">{t.name}</p>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                  “{t.note}”
-                </p>
-              </Card>
-            ))}
-          </div>
-        </Container>
-      </section> */}
-
       <section className="py-14">
         <Container>
           <SectionHeading
@@ -205,14 +193,18 @@ export default function HomePage() {
               </div>
               <div className="flex flex-wrap gap-3 md:justify-end">
                 <Button
-                  href="https://wa.me/94755350828"
+                  href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_HOME_TEXT}`}
                   target="_blank"
                   rel="noreferrer"
                   className="text-slate-900 hover:bg-sun-400"
                 >
                   Book on WhatsApp
                 </Button>
-                <Button href="/contact-us" variant="secondary" className="text-slate-900 hover:bg-sun-400">
+                <Button
+                  href={`tel:+${WHATSAPP_NUMBER}`}
+                  variant="secondary"
+                  className="text-slate-900 hover:bg-sun-400"
+                >
                   Contact page
                 </Button>
               </div>

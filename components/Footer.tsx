@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Container } from "./Container";
 import { Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
+import { WHATSAPP_NUMBER, EMAIL } from "@/lib/constants";
 
 export function Footer() {
   return (
@@ -15,8 +16,9 @@ export function Footer() {
               <p className="text-sm font-semibold">Tropic Rides</p>
             </div>
             <p className="mt-3 text-sm text-slate-600">
-              Scooter rentals, airport transfers, surf lessons and tours for travelers in Sri
-              Lanka. Clean vehicles, friendly service, and simple booking.
+              Scooter rentals, airport transfers, surf lessons and tours for
+              travelers in Sri Lanka. Clean vehicles, friendly service, and
+              simple booking.
             </p>
           </div>
 
@@ -25,11 +27,19 @@ export function Footer() {
             <ul className="mt-3 space-y-2 text-sm text-slate-600">
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-ocean-700" />
-                <span>+94 75 535 0828</span>
+                <span>
+                  {" "}
+                  {`+${WHATSAPP_NUMBER.slice(0, 2)} ${WHATSAPP_NUMBER.slice(
+                    2,
+                    4
+                  )} ${WHATSAPP_NUMBER.slice(4, 7)} ${WHATSAPP_NUMBER.slice(
+                    7
+                  )}`}
+                </span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-ocean-700" />
-                <span>tropicrides@gmail.com</span>
+                <span>{EMAIL}</span>
               </li>
               <li className="flex items-center gap-2">
                 <MapPin className="h-4 w-4 text-ocean-700" />

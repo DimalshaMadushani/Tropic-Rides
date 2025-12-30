@@ -2,6 +2,7 @@ import { Container } from "@/components/Container";
 import { SectionHeading } from "@/components/SectionHeading";
 import { tours } from "@/lib/data";
 import { ItemCard } from "@/components/ItemCard";
+import { WHATSAPP_NUMBER, WHATSAPP_TOUR_TEXT } from "@/lib/constants";
 
 export default function TourPage() {
   return (
@@ -77,11 +78,13 @@ export default function TourPage() {
 
               <div className="sm:flex sm:justify-end">
                 <a
-                  href="/contact"
+                  href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_TOUR_TEXT}`}
+                  target="_blank"
+                  rel="noreferrer"
                   className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-ocean-600 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-ocean-600/15 transition hover:bg-ocean-700 sm:w-auto"
                 >
                   <span aria-hidden>📅</span>
-                  Ask availability
+                  Book your tour
                 </a>
               </div>
             </div>

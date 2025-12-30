@@ -6,17 +6,7 @@ import clsx from "clsx";
 import { Menu, X } from "lucide-react";
 import { Container } from "./Container";
 import { Button } from "./Button";
-
-const nav = [
-  { label: "Home", href: "/" },
-  { label: "Airport Transfers", href: "/airport-transfers" },
-  { label: "Scooters", href: "/scooter-rent" },
-  // { label: "Cars", href: "/car-rent" },
-  { label: "Tours", href: "/tour" },
-  { label: "Surf Lessons", href: "/surf-lessons" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact-us" },
-];
+import { WHATSAPP_NUMBER, NAV_LINKS } from "@/lib/constants";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -51,7 +41,7 @@ export function Navbar() {
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
-          {nav.map((item) => (
+          {NAV_LINKS.map((item) => (
             <Link
               key={item.href}
               href={item.href}
@@ -62,7 +52,7 @@ export function Navbar() {
           ))}
           <div className="ml-2">
             <Button
-              href="https://wa.me/+94755350828"
+              href={`https://wa.me/${WHATSAPP_NUMBER}`}
               target="_blank"
               rel="noreferrer"
               className="px-3"
@@ -86,7 +76,7 @@ export function Navbar() {
         <div className="border-t border-slate-200/70 bg-sand-50 md:hidden">
           <Container className="py-3">
             <div className="flex flex-col gap-1">
-              {nav.map((item) => (
+              {NAV_LINKS.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
@@ -98,7 +88,7 @@ export function Navbar() {
               ))}
               <div className="pt-2">
                 <Button
-                  href="https://wa.me/+94755350828"
+                  href={`https://wa.me/${WHATSAPP_NUMBER}`}
                   target="_blank"
                   rel="noreferrer"
                   className="w-full"

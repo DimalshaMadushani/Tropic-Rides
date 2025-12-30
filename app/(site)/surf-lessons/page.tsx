@@ -1,5 +1,6 @@
 import { Container } from "@/components/Container";
 import { SectionHeading } from "@/components/SectionHeading";
+import { WHATSAPP_NUMBER, WHATSAPP_SURF_TEXT } from "@/lib/constants";
 
 export default function SurfLessonsPage() {
   return (
@@ -137,10 +138,12 @@ export default function SurfLessonsPage() {
 
                   <div className="mt-6 grid gap-3">
                     <a
-                      href="/contact"
+                      href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_SURF_TEXT}`}
+                      target="_blank"
+                      rel="noreferrer"
                       className="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-teal-900 shadow-soft hover:bg-teal-50"
                     >
-                      Ask availability
+                      Book your lesson
                     </a>
 
                     <p className="text-xs text-white/80">

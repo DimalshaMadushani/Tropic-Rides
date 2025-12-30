@@ -4,12 +4,11 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { Card } from "@/components/Card";
 import { Button } from "@/components/Button";
 import { Mail, Phone, MessageCircle } from "lucide-react";
-
-const WHATSAPP_NUMBER = "94755350828";
-const WHATSAPP_TEXT = encodeURIComponent(
-  "Hi Tropic Rides! I’d like to book. My dates are __, pickup location is __, and I’m interested in __ (scooter / car / tour / airport)."
-);
-const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_TEXT}`;
+import {
+  WHATSAPP_NUMBER,
+  WHATSAPP_CONTACTUS_TEXT,
+  EMAIL,
+} from "@/lib/constants";
 
 export default function ContactPage() {
   return (
@@ -48,7 +47,7 @@ export default function ContactPage() {
 
                     <div className="mt-3 flex flex-wrap gap-2">
                       <Button
-                        href={WHATSAPP_LINK}
+                        href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_CONTACTUS_TEXT}`}
                         target="_blank"
                         rel="noreferrer"
                       >
@@ -80,13 +79,25 @@ export default function ContactPage() {
                         Phone
                       </p>
                       <p className="mt-1 text-sm text-slate-600">
-                        +94 75 535 0828
+                        {`+${WHATSAPP_NUMBER.slice(
+                          0,
+                          2
+                        )} ${WHATSAPP_NUMBER.slice(
+                          2,
+                          4
+                        )} ${WHATSAPP_NUMBER.slice(
+                          4,
+                          7
+                        )} ${WHATSAPP_NUMBER.slice(7)}`}
                       </p>
                     </div>
                   </div>
 
                   <div className="shrink-0">
-                    <Button href="tel:+94755350828" variant="secondary">
+                    <Button
+                      href={`tel:+${WHATSAPP_NUMBER}`}
+                      variant="secondary"
+                    >
                       Call now
                     </Button>
                   </div>
@@ -106,7 +117,7 @@ export default function ContactPage() {
                         Email
                       </p>
                       <p className="mt-1 text-sm text-slate-600 break-all">
-                        your.email@example.com
+                        {EMAIL}
                       </p>
                     </div>
                   </div>
