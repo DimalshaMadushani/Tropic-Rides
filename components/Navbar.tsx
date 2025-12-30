@@ -1,0 +1,115 @@
+"use client";
+
+import Link from "next/link";
+import { useEffect, useMemo, useState } from "react";
+import clsx from "clsx";
+import { Menu, X } from "lucide-react";
+import { Container } from "./Container";
+import { Button } from "./Button";
+
+const nav = [
+  { label: "Home", href: "/" },
+  { label: "Airport Transfers", href: "/airport-transfers" },
+  { label: "Scooters", href: "/scooter-rent" },
+  // { label: "Cars", href: "/car-rent" },
+  { label: "Tours", href: "/tour" },
+  { label: "Surf Lessons", href: "/surf-lessons" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact-us" },
+];
+
+export function Navbar() {
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const barClass = useMemo(
+    () =>
+      clsx(
+        "sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-sand-50/70",
+        scrolled ? "border-b border-slate-200/70" : "border-b border-transparent"
+      ),
+    [scrolled]
+  );
+
+  return (
+    <header className={barClass}>
+      <Container className="flex h-16 items-center justify-between">
+        <Link href="/" className="flex items-center gap-2">
+          <div className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-ocean-500 to-sun-500 text-white shadow-soft">
+            ST
+          </div>
+          <span className="text-sm font-semibold tracking-tight">
+            ST Scooter Rentals
+          </span>
+        </Link>
+
+        <nav className="hidden items-center gap-1 md:flex">
+          {nav.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="rounded-xl px-3 py-2 text-sm text-slate-700 hover:bg-sand-100 hover:text-slate-900"
+            >
+              {item.label}
+            </Link>
+          ))}
+          <div className="ml-2">
+            <Button
+              href="https://wa.me/+94755350828"
+              target="_blank"
+              rel="noreferrer"
+              className="px-3"
+            >
+              WhatsApp
+            </Button>
+          </div>
+        </nav>
+
+        <button
+          type="button"
+          className="inline-flex items-center justify-center rounded-xl p-2 text-slate-700 hover:bg-sand-100 md:hidden"
+          onClick={() => setOpen((v) => !v)}
+          aria-label="Toggle menu"
+        >
+          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+        </button>
+      </Container>
+
+      {open ? (
+        <div className="border-t border-slate-200/70 bg-sand-50 md:hidden">
+          <Container className="py-3">
+            <div className="flex flex-col gap-1">
+              {nav.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className="rounded-xl px-3 py-2 text-sm text-slate-700 hover:bg-sand-100 hover:text-slate-900"
+                >
+                  {item.label}
+                </Link>
+              ))}
+              <div className="pt-2">
+                <Button
+                  href="https://wa.me/+94755350828"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-full"
+                >
+                  Book on WhatsApp
+                </Button>
+              </div>
+            </div>
+          </Container>
+        </div>
+      ) : null}
+    </header>
+  );
+}
