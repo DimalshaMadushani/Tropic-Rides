@@ -5,13 +5,13 @@ import { Footer } from "@/components/Footer";
 import { WhatsAppFab } from "@/components/WhatsAppFab";
 
 export const metadata: Metadata = {
-  title: "ST Scooter Rentals",
+  title: "Tropic Rides",
   description:
-    "Scooter rentals, airport drop and pickup, and tours in Sri Lanka. Responsive, simple booking and friendly service.",
+    "Scooter rentals, airport drop and pickup, surf lessons, and tours in Sri Lanka. Responsive, simple booking and friendly service.",
   openGraph: {
-    title: "ST Scooter Rentals",
+    title: "Tropic Rides",
     description:
-      "Scooter rentals, airport drop and pickup, and tours in Sri Lanka.",
+      "Scooter rentals, airport drop and pickup, surf lessons, and tours in Sri Lanka.",
     type: "website",
   },
 };

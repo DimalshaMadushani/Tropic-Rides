@@ -1,6 +1,4 @@
-import image from "next/image";
-
-export type ServiceKey = "scooter" | "airport" | "tour" | "car";
+export type ServiceKey = "scooter" | "airport" | "tour" | "car" | "surf";
 
 export type Category = {
   key: ServiceKey;
@@ -24,7 +22,7 @@ export const categories: Category[] = [
     title: "Airport Drop & Pickup",
     description:
       "Comfortable airport transfers with friendly drivers. Reliable timing, clean vehicles, and help with luggage.",
-    href: "/contact-us#airport",
+    href: "/airport-transfers",
     image: "/images/airport_image.webp",
   },
   {
@@ -36,12 +34,12 @@ export const categories: Category[] = [
     image: "/images/sigiriya_light.jpg",
   },
   {
-    key: "car",
-    title: "Car Rentals",
+    key: "surf",
+    title: "Surf Lessons",
     description:
-      "Cars and vans for families and groups. Plenty of space for luggage and surfboards.",
-    href: "/car-rent",
-    image: "/images/carRent_image.jpg",
+      "Learn to surf with experienced local instructors. Suitable for all levels.",
+    href: "/surf-lessons",
+    image: "/images/surf_lessons_image.jpg",
   },
 ];
 
@@ -55,63 +53,78 @@ export type Scooter = {
 
 export const scooters: Scooter[] = [
   {
-    id: "s1",
-    name: "Scooter 1",
-    description: "Comfortable ride for city and beach roads.",
-    pricePerDayUSD: 10,
+    id: "deo-110",
+    name: "DEO 110cc",
+    description: "Easy, fuel-friendly scooter for short rides and daily travel.",
+    pricePerDayUSD: 6.50,
     image: "/images/scooter_image.webp",
   },
   {
-    id: "s2",
-    name: "Scooter 2",
-    description: "Great for longer rides and smooth handling.",
-    pricePerDayUSD: 20,
+    id: "ntorq-125",
+    name: "TVS Ntorq 125cc",
+    description: "More power and comfort for longer rides around the down south.",
+    pricePerDayUSD: 8.00,
     image: "/images/scooter_image.webp",
   },
   {
-    id: "s3",
-    name: "Scooter 3",
-    description: "A simple, reliable option for everyday travel.",
-    pricePerDayUSD: 30,
+    id: "navi-110",
+    name: "Honda Navi 110cc",
+    description: "Compact and fun, great for quick town runs and beach roads.",
+    pricePerDayUSD: 6.00,
     image: "/images/scooter_image.webp",
   },
 ];
 
-export type Car = {
+export type AirportTransfer = {
   id: string;
   name: string;
   passengers: number;
   description: string;
-  pricePerDayUSD: number;
   image: string;
+  meta: string;
 };
 
-export const cars: Car[] = [
+export const airportTransfers: AirportTransfer[] = [
   {
-    id: "c1",
-    name: "Fit Shuttle Luxury Hybrid",
-    passengers: 3,
-    description: "Luggage and surfboard allowed.",
-    pricePerDayUSD: 100,
-    image:"/images/cars/car1.jpeg",
+    id: "mini",
+    name: "Mini-car",
+    passengers: 2,
+    description: "Best for solo or couples. Light luggage.",
+    image: "/images/airport_car.jpg",
+    meta: "LKR 16,000 (~$52)",
   },
+  // {
+  //   id: "sedan",
+  //   name: "Sedan",
+  //   passengers: 3,
+  //   description: "Comfort ride with space for luggage.",
+  //   image: "/images/airport_car.jpg",
+  //   meta: "LKR 16,000 (~$52)",
+  // },
   {
-    id: "c2",
-    name: "Insight Luxury Hybrid",
+    id: "shuttle",
+    name: "Shuttle",
     passengers: 4,
-    description: "Comfort ride with good fuel economy.",
-    pricePerDayUSD: 150,
-    image:"/images/cars/car3-red.jpeg",
+    description: "Smooth ride. Surfboard friendly on request.",
+    image: "/images/airport_car.jpg",
+    meta: "LKR 16,000 (~$52)",
   },
-
   {
-    id: "c3",
-    name: "Luxury Hybrid Van",
-    passengers: 8,
-    description: "Space for 8 passengers plus luggage.",
-    pricePerDayUSD: 300,
-    image:"/images/cars/van1.jpeg",
+    id: "van",
+    name: "Van",
+    passengers: 6,
+    description: "Great for families and groups with luggage.",
+    image: "/images/airport_car.jpg",
+    meta: "Inquire on WhatsApp",
   },
+  // {
+  //   id: "large-van",
+  //   name: "Large Van",
+  //   passengers: 8,
+  //   description: "Extra space for passengers plus luggage.",
+  //   image: "/images/airport_car.jpg",
+  //   meta: "Inquire on WhatsApp",
+  // },
 ];
 
 export type Tour = {
@@ -125,28 +138,76 @@ export type Tour = {
 export const tours: Tour[] = [
   {
     id: "t1",
-    title: "Ella Tours",
-    subtitle: "Enjoy the beauty of Ella",
+    title: "Hiriketiya Beach",
+    subtitle: "Surf, swim, and chill in a perfect bay",
     description:
-      "Tea hills, cool weather, and iconic viewpoints. Great for relaxed scenic travel.",
+      "A relaxed beach stop with great sunsets, cafes, and easy vibes for a full day out.",
+    imageUrl:
+      "https://www.erikastravels.com/wp-content/uploads/2017/10/9-Arch-Bridge-Train.jpg",  
+  },
+  {
+    id: "t2",
+    title: "Kandy",
+    subtitle: "Culture, lake views, and hill-country charm",
+    description:
+      "Explore the city, local markets, and scenic viewpoints with comfortable travel in between.",
     imageUrl:
       "https://www.erikastravels.com/wp-content/uploads/2017/10/9-Arch-Bridge-Train.jpg",
   },
   {
-    id: "t2",
-    title: "Yala Tours",
-    subtitle: "See the wildlife in Yala",
+    id: "t3",
+    title: "Nuwara Eliya",
+    subtitle: "Tea country, cool air, and beautiful landscapes",
     description:
-      "Safari experience with a chance to spot elephants, birds, and more.",
+      "Visit tea estates, enjoy calm weather, and take in green valleys on a smooth day trip.",
     imageUrl:
-      "https://thumbs.dreamstime.com/b/sri-lankan-leopard-panthera-pardus-kotiya-acacia-tree-nature-habitat-yala-national-park-sri-lanka-67952131.jpg",
+      "https://www.erikastravels.com/wp-content/uploads/2017/10/9-Arch-Bridge-Train.jpg",
   },
   {
-    id: "t3",
-    title: "Udawalawe National Park Tours",
-    subtitle: "Elephants and open landscapes",
+    id: "t4",
+    title: "Boat Safari, Koggala Lake",
+    subtitle: "A peaceful ride through nature",
     description:
-      "A popular park for elephant sightings with wide open areas and beautiful sunsets.",
-    imageUrl: "/images/tours_image.jpg",
+      "A calm boat safari with mangroves, birds, and quiet views. Great for families and couples.",
+    imageUrl:
+      "https://www.erikastravels.com/wp-content/uploads/2017/10/9-Arch-Bridge-Train.jpg",
+  },
+  {
+    id: "t5",
+    title: "Arugambay",
+    subtitle: "East-coast beaches and famous surf spots",
+    description:
+      "A longer escape to wide beaches and surf breaks, with flexible stops along the route.",
+    imageUrl:
+      "https://www.erikastravels.com/wp-content/uploads/2017/10/9-Arch-Bridge-Train.jpg",
+  },
+
+  // Optional: keep your existing popular tours too
+  {
+    id: "t6",
+    title: "Ella",
+    subtitle: "Tea hills, viewpoints, and the hill-country train line",
+    description:
+      "A scenic day with fresh air, green slopes, and iconic photo spots.",
+    imageUrl:
+      "https://www.erikastravels.com/wp-content/uploads/2017/10/9-Arch-Bridge-Train.jpg",
+  },
+  {
+    id: "t7",
+    title: "Yala National Park",
+    subtitle: "Wildlife safari with an early start",
+    description:
+      "A memorable safari experience with a chance to spot elephants, birds, and more.",
+    imageUrl:
+      "https://www.erikastravels.com/wp-content/uploads/2017/10/9-Arch-Bridge-Train.jpg",
+  },
+  {
+    id: "t8",
+    title: "Udawalawe National Park",
+    subtitle: "Elephants and wide open landscapes",
+    description:
+      "One of the best parks for elephant sightings, with beautiful open views.",
+    imageUrl:
+      "https://www.erikastravels.com/wp-content/uploads/2017/10/9-Arch-Bridge-Train.jpg",
   },
 ];

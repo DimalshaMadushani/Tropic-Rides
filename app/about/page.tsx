@@ -11,7 +11,7 @@ export default function AboutPage() {
             <SectionHeading
               eyebrow="About"
               title="A simple rental experience for Sri Lanka travel"
-              subtitle="ST Scooter Rentals is a front-end website concept for scooter rentals, airport transfers, and tours. The focus is a clean and responsive UI that works well on any device."
+              subtitle="Tropic Rides is a front-end website concept for scooter rentals, airport transfers, and tours. The focus is a clean and responsive UI that works well on any device."
             />
             <div className="mt-6 space-y-3 text-sm leading-relaxed text-slate-600">
               <p>
@@ -30,7 +30,7 @@ export default function AboutPage() {
             <div className="relative h-[320px] w-full sm:h-[420px]">
               <Image
                 src="/images/aboutUs_image.jpg"
-                alt="About ST Scooter Rentals"
+                alt="About Tropic Rides"
                 fill
                 className="object-cover"
                 priority

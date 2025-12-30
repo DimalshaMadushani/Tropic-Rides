@@ -15,20 +15,6 @@ const perks = [
   { icon: CheckCircle2, title: "Straightforward pricing", text: "Clear day rates." },
 ];
 
-const testimonials = [
-  {
-    name: "Nimal",
-    note: "Great service and quick delivery. The scooter was clean and smooth.",
-  },
-  {
-    name: "Sarah",
-    note: "Airport pickup was on time and super friendly. Easy communication.",
-  },
-  {
-    name: "Ravi",
-    note: "Tour suggestions were excellent. We saw amazing places without stress.",
-  },
-];
 
 export default function HomePage() {
   return (
@@ -46,11 +32,10 @@ export default function HomePage() {
               Sri Lanka travel rentals
             </p>
             <h1 className="mt-4 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-              Scooters, airport transfers, and tours for a smooth trip
+              Scooters, surf lessons, transfers, and tours made easy
             </h1>
             <p className="mt-4 text-base leading-relaxed text-slate-600">
-              Book in minutes. Get a scooter delivered, arrange airport drop and
-              pickup, or plan a tour with local guidance.
+              Book in minutes. Get a scooter delivered, learn to surf with local instructors, arrange airport pickup, or explore the area with guided tours.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
@@ -96,7 +81,7 @@ export default function HomePage() {
                   priority
                 />
               </div>
-              <div className="p-5">
+              {/* <div className="p-5">
                 <p className="text-sm font-semibold text-slate-900">
                   Travel-ready support
                 </p>
@@ -104,7 +89,7 @@ export default function HomePage() {
                   Message us your dates and location. We will confirm and guide
                   you.
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
         </Container>
@@ -115,7 +100,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Services"
             title="Choose what you need"
-            subtitle="Scooter rentals, airport drop and pickup, tours, and car rentals. Simple booking and clear options."
+            subtitle="Scooter rentals, airport drop and pickup, surf lessons, and tours. Simple booking and clear options."
           />
 
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -172,7 +157,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="py-14">
+      {/* <section className="py-14">
         <Container>
           <SectionHeading
             eyebrow="Testimonials"
@@ -190,7 +175,7 @@ export default function HomePage() {
             ))}
           </div>
         </Container>
-      </section>
+      </section> */}
 
       <section className="py-14">
         <Container>
@@ -223,11 +208,11 @@ export default function HomePage() {
                   href="https://wa.me/94755350828"
                   target="_blank"
                   rel="noreferrer"
-                  className="bg-white text-slate-900 hover:bg-sand-100"
+                  className="text-slate-900 hover:bg-sun-400"
                 >
                   Book on WhatsApp
                 </Button>
-                <Button href="/contact-us" variant="secondary" className="bg-ocean-600 text-white ring-1 ring-white/20 hover:bg-ocean-500">
+                <Button href="/contact-us" variant="secondary" className="text-slate-900 hover:bg-sun-400">
                   Contact page
                 </Button>
               </div>

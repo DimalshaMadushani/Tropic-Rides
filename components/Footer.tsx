@@ -10,12 +10,12 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2">
               <div className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-ocean-500 to-sun-500 text-white shadow-soft">
-                ST
+                TR
               </div>
-              <p className="text-sm font-semibold">ST Scooter Rentals</p>
+              <p className="text-sm font-semibold">Tropic Rides</p>
             </div>
             <p className="mt-3 text-sm text-slate-600">
-              Scooter rentals, airport transfers, and tours for travelers in Sri
+              Scooter rentals, airport transfers, surf lessons and tours for travelers in Sri
               Lanka. Clean vehicles, friendly service, and simple booking.
             </p>
           </div>
@@ -25,11 +25,11 @@ export function Footer() {
             <ul className="mt-3 space-y-2 text-sm text-slate-600">
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-ocean-700" />
-                <span>+94 76 987 6543</span>
+                <span>+94 75 535 0828</span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-ocean-700" />
-                <span>agstmadushanka1997@gmail.com</span>
+                <span>tropicrides@gmail.com</span>
               </li>
               <li className="flex items-center gap-2">
                 <MapPin className="h-4 w-4 text-ocean-700" />
@@ -41,18 +41,6 @@ export function Footer() {
           <div>
             <p className="text-sm font-semibold">Links</p>
             <div className="mt-3 flex flex-wrap gap-2">
-              <Link
-                href="/contact-us"
-                className="rounded-xl bg-sand-100 px-3 py-2 text-sm text-slate-700 hover:bg-sand-200"
-              >
-                Contact Us
-              </Link>
-              <Link
-                href="/about"
-                className="rounded-xl bg-sand-100 px-3 py-2 text-sm text-slate-700 hover:bg-sand-200"
-              >
-                About
-              </Link>
               <a
                 href="https://facebook.com"
                 target="_blank"
@@ -76,7 +64,7 @@ export function Footer() {
         </div>
 
         <p className="mt-10 text-xs text-slate-500">
-          © {new Date().getFullYear()} ST Scooter Rentals. All rights reserved.
+          © {new Date().getFullYear()} Tropic Rides. All rights reserved.
         </p>
       </Container>
     </footer>

@@ -8,7 +8,7 @@ export function SectionHeading({
   subtitle?: string;
 }) {
   return (
-    <div className="max-w-2xl">
+    <div className="max-w-3xl">
       {eyebrow ? (
         <p className="text-sm font-semibold tracking-wide text-ocean-700">
           {eyebrow}

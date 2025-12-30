@@ -1,21 +1,24 @@
 import Image from "next/image";
 import { Card } from "./Card";
-import { Button } from "./Button";
+
+type Props = Readonly<{
+  title: string;
+  subtitle: string;
+  imageSrc: string;
+  meta?: string;
+  incImgHeight?: boolean;
+}>;
 
 export function ItemCard({
   title,
   subtitle,
   imageSrc,
   meta,
-}: {
-  title: string;
-  subtitle: string;
-  imageSrc: string;
-  meta?: string;
-}) {
+  incImgHeight: increaseHeight = false,
+}: Props) {
   return (
     <Card className="overflow-hidden">
-      <div className="relative h-44 w-full">
+      <div className={`relative w-full ${increaseHeight ? "h-72" : "h-44"}`}>
         <Image
           src={imageSrc}
           alt={title}
@@ -38,7 +41,7 @@ export function ItemCard({
           ) : null}
         </div>
 
-        <div className="mt-4">
+        {/* <div className="mt-4">
           <Button
             href="https://wa.me/0000000000"
             target="_blank"
@@ -47,7 +50,7 @@ export function ItemCard({
           >
             Ask availability
           </Button>
-        </div>
+        </div> */}
       </div>
     </Card>
   );
