@@ -4,13 +4,21 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import clsx from "clsx";
 import { Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
 import { Container } from "./Container";
 import { Button } from "./Button";
 import { WHATSAPP_NUMBER, NAV_LINKS } from "@/lib/constants";
 
+function isActivePath(pathname: string, href: string) {
+  // exact match for home, prefix match for other routes
+  if (href === "/") return pathname === "/";
+  return pathname === href || pathname.startsWith(href + "/");
+}
+
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -19,14 +27,29 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
   const barClass = useMemo(
     () =>
       clsx(
         "sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-sand-50/70",
-        scrolled ? "border-b border-slate-200/70" : "border-b border-transparent"
+        scrolled
+          ? "border-b border-slate-200/70"
+          : "border-b border-transparent"
       ),
     [scrolled]
   );
+
+  const linkClass = (active: boolean) =>
+    clsx(
+      "rounded-xl px-3 py-2 text-sm transition-colors",
+      active
+        ? "bg-sand-200 text-slate-900 font-semibold"
+        : "text-slate-700 hover:bg-sand-100 hover:text-slate-900"
+    );
 
   return (
     <header className={barClass}>
@@ -39,15 +62,19 @@ export function Navbar() {
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
-          {NAV_LINKS.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="rounded-xl px-3 py-2 text-sm text-slate-700 hover:bg-sand-100 hover:text-slate-900"
-            >
-              {item.label}
-            </Link>
-          ))}
+          {NAV_LINKS.map((item) => {
+            const active = isActivePath(pathname, item.href);
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                aria-current={active ? "page" : undefined}
+                className={linkClass(active)}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
           <div className="ml-2">
             <Button
               href={`https://wa.me/${WHATSAPP_NUMBER}`}
@@ -74,16 +101,19 @@ export function Navbar() {
         <div className="border-t border-slate-200/70 bg-sand-50 md:hidden">
           <Container className="py-3">
             <div className="flex flex-col gap-1">
-              {NAV_LINKS.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setOpen(false)}
-                  className="rounded-xl px-3 py-2 text-sm text-slate-700 hover:bg-sand-100 hover:text-slate-900"
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {NAV_LINKS.map((item) => {
+                const active = isActivePath(pathname, item.href);
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    aria-current={active ? "page" : undefined}
+                    className={linkClass(active)}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
               <div className="pt-2">
                 <Button
                   href={`https://wa.me/${WHATSAPP_NUMBER}`}
