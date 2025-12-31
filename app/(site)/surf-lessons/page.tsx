@@ -108,7 +108,26 @@ export default function SurfLessonsPage() {
                     Spots chosen by conditions
                   </span>
                 </div>
-              </div>
+                  {/* NEW: locations line */}
+<div className="mt-6 rounded-2xl border border-teal-200/60 bg-teal-50/40 p-3">
+  <div className="flex flex-wrap items-center gap-2">
+
+    <span className="rounded-full border border-teal-200 bg-white px-3 py-2 text-xs font-medium text-teal-900">
+      📍Ahangama
+    </span>
+    <span className="rounded-full border border-teal-200 bg-white px-3 py-2 text-xs font-medium text-teal-900">
+      📍Midigama
+    </span>
+    <span className="rounded-full border border-teal-200 bg-white px-3 py-2 text-xs font-medium text-teal-900">
+      📍Weligama
+    </span>
+  </div>
+</div>
+
+</div>
+      
+
+              
 
               {/* Right: CTA panel (with background image) */}
               {/* Align the items at the center */}
@@ -152,7 +171,9 @@ export default function SurfLessonsPage() {
                     </p>
                   </div>
                 </div>
+
               </div>
+              
             </div>
           </div>
         </div>

@@ -6,28 +6,29 @@ export const EMAIL = "tropicrides@gmail.com";
 export const INSTAGRAM = "https://www.instagram.com/tropic_rides"
 
 export const WHATSAPP_SCOOTERS_TEXT = encodeURIComponent(
-  "Hi Tropic Rides! I want scooter delivery."
+  "Hi Tropic Rides! I’d like to arrange a scooter delivery. Could you share the available options and prices?"
 );
 
 export const WHATSAPP_HOME_TEXT = encodeURIComponent(
-  "Hi Tropic Rides! Can I get more info on your services?"
+  "Hi Tropic Rides! I’m interested in your services and would love some more details. Thanks!"
 );
 
 export const WHATSAPP_AIRPORT_TEXT = encodeURIComponent(
-  "Hi Tropic Rides! I need an airport transfer."
+  "Hi Tropic Rides! I’m looking for an airport transfer. Could you let me know the details and rates?"
 );
 
 export const WHATSAPP_CONTACTUS_TEXT = encodeURIComponent(
-  "Hi Tropic Rides! I'd like to book. My dates are __, pickup location is __, and I'm interested in __ (scooter / car / tour / airport)."
+  "Hi Tropic Rides! Can I get more info on your services?"
 );
 
 export const WHATSAPP_SURF_TEXT = encodeURIComponent(
-  "Hi Tropic Rides! I want to book surf lessons."
+  "Hi Tropic Rides! I’m interested in booking surf lessons. Could you share the available sessions and prices?"
 );
 
 export const WHATSAPP_TOUR_TEXT = encodeURIComponent(
-  "Hi Tropic Rides! I want to book a tour."
+  "Hi Tropic Rides! I’d love to book a tour. Can you tell me more about the available options?"
 );
+
 
 export const NAV_LINKS = [
   { label: "Home", href: "/" },

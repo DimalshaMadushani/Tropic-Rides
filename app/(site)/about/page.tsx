@@ -18,7 +18,7 @@ export default function AboutPage() {
               <p>
                 Tropic Rides is a locally focused travel service based in Sri
                 Lanka, offering scooter rentals, airport transfers, private
-                tours, and surf lessons. We mainly operate along the south coast,
+                tours, and surf lessons. We mainly operate along the south coast especially in Kabalana, Ahangama, Midigama and Weligama,
                 where most travelers come to enjoy beaches, surf spots, and
                 relaxed coastal towns.
               </p>
