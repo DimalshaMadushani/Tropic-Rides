@@ -93,7 +93,7 @@ export const airportTransfers: AirportTransfer[] = [
     passengers: 2,
     description: "Best for solo or couples. Light luggage.",
     image: "/airport/mini_car.webp",
-    meta: "LKR 16,000 (~$52)",
+    meta: "Inquire on WhatsApp",
   },
   {
     id: "shuttle",
@@ -101,7 +101,7 @@ export const airportTransfers: AirportTransfer[] = [
     passengers: 4,
     description: "Smooth ride. Surfboard friendly on request.",
     image: "/airport/shuttle.webp",
-    meta: "LKR 16,000 (~$52)",
+    meta: "Inquire on WhatsApp",
   },
   {
     id: "van",
@@ -109,7 +109,7 @@ export const airportTransfers: AirportTransfer[] = [
     passengers: 6,
     description: "Great for families and groups with luggage.",
     image: "/airport/van.webp",
-    meta: "LKR 16,000 (~$52)",
+    meta: "Inquire on WhatsApp",
   },
 ];
 
