@@ -51,9 +51,9 @@ export default function AirportTransfersPage() {
                       Pickup or drop
                     </span>
                     <span className="text-base font-semibold text-slate-900">
-                      LKR 16,000
+                      LKR 15,000
                     </span>
-                    <span className="text-xs text-slate-500">(~$52)</span>
+                    <span className="text-xs text-slate-500">(~$50)</span>
                   </div>
 
                   <div className="inline-flex items-center gap-2 rounded-xl bg-white/70 px-3 py-2 ring-1 ring-slate-200">
