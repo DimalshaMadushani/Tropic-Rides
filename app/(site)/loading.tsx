@@ -8,10 +8,6 @@ export default function Loading() {
       </div>
 
       <div className="relative rounded-3xl border border-slate-200 bg-white/80 px-7 py-6 shadow-soft backdrop-blur">
-        <div className="mx-auto grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-sky-500 to-amber-400 text-sm font-semibold text-white shadow-soft">
-          TR
-        </div>
-
         <p className="mt-3 text-center text-sm font-semibold text-slate-900">
           Loading...
         </p>

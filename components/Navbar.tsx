@@ -30,11 +30,9 @@ export function Navbar() {
 
   return (
     <header className={barClass}>
-      <Container className="flex h-16 items-center justify-between">
+      <Container className="flex h-24 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <div className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-ocean-500 to-sun-500 text-white shadow-soft">
-            TR
-          </div>
+          <img src="/logo.svg" alt="Tropic Rides Logo" className="h-24 w-24" />
           <span className="text-sm font-semibold tracking-tight">
             Tropic Rides
           </span>

@@ -3,6 +3,7 @@ export const HERO_BLUR =
 
 export const WHATSAPP_NUMBER = "94755350828";
 export const EMAIL = "tropicrides@gmail.com";
+export const INSTAGRAM = "https://www.instagram.com/tropic_rides"
 
 export const WHATSAPP_SCOOTERS_TEXT = encodeURIComponent(
   "Hi Tropic Rides! I want scooter delivery."

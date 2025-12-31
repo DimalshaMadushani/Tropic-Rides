@@ -1,7 +1,6 @@
-import Link from "next/link";
 import { Container } from "./Container";
 import { Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
-import { WHATSAPP_NUMBER, EMAIL } from "@/lib/constants";
+import { WHATSAPP_NUMBER, EMAIL, INSTAGRAM } from "@/lib/constants";
 
 export function Footer() {
   return (
@@ -10,9 +9,7 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-3">
           <div>
             <div className="flex items-center gap-2">
-              <div className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-ocean-500 to-sun-500 text-white shadow-soft">
-                TR
-              </div>
+              <img src="/logo.svg" alt="Tropic Rides Logo" className="h-9 w-9" />
               <p className="text-sm font-semibold">Tropic Rides</p>
             </div>
             <p className="mt-3 text-sm text-slate-600">
@@ -61,7 +58,7 @@ export function Footer() {
                 Facebook
               </a>
               <a
-                href="https://instagram.com"
+                href={INSTAGRAM}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl bg-sand-100 px-3 py-2 text-sm text-slate-700 hover:bg-sand-200"
