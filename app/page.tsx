@@ -89,7 +89,7 @@ export default function HomePage() {
             <div className="overflow-hidden rounded-3xl bg-white shadow-card ring-1 ring-slate-200/60">
               <div className="relative h-[340px] w-full sm:h-[420px]">
                 <Image
-                  src="/home/hero.jpg"
+                  src="/home/hero_v2.webp"
                   alt="Sri Lanka scenic travel"
                   fill
                   className="object-cover"
