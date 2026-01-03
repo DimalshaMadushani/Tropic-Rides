@@ -53,7 +53,7 @@ export function Navbar() {
 
   return (
     <header className={barClass}>
-      <Container className="flex h-24 items-center justify-between">
+      <Container className="flex h-22 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <img src="/logo.svg" alt="Tropic Rides Logo" className="h-18 w-18" />
           <span className="text-sm font-semibold tracking-tight">
