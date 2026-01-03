@@ -45,7 +45,7 @@ export default function HomePage() {
               Sri Lanka travel rentals
             </p>
             <h1 className="mt-4 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-              Scooters, surf lessons, transfers, and tours made easy
+              Scooters, surf lessons, airport transfers, and tours made easy
             </h1>
             <p className="mt-4 text-base leading-relaxed text-slate-600">
               Book in minutes. Get a scooter delivered, learn to surf with local

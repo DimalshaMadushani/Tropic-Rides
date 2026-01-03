@@ -1,6 +1,6 @@
 import { Container } from "./Container";
 import { Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
-import { WHATSAPP_NUMBER, EMAIL, INSTAGRAM } from "@/lib/constants";
+import { WHATSAPP_NUMBER, EMAIL, INSTAGRAM, FACEBOOK } from "@/lib/constants";
 
 export function Footer() {
   return (
@@ -49,7 +49,7 @@ export function Footer() {
             <p className="text-sm font-semibold">Links</p>
             <div className="mt-3 flex flex-wrap gap-2">
               <a
-                href="https://facebook.com"
+                href={FACEBOOK}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl bg-sand-100 px-3 py-2 text-sm text-slate-700 hover:bg-sand-200"

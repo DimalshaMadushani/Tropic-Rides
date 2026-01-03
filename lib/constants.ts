@@ -6,6 +6,7 @@ export const SITE_URL = "https://www.tropicrides.lk";
 export const WHATSAPP_NUMBER = "94755350828";
 export const EMAIL = "tropicrides@gmail.com";
 export const INSTAGRAM = "https://www.instagram.com/tropic_rides"
+export const FACEBOOK = "https://www.facebook.com/people/Tropic-Rides/61585992384471/";
 
 export const WHATSAPP_SCOOTERS_TEXT = encodeURIComponent(
   "Hi Tropic Rides! I'd like to arrange a scooter delivery. Could you share the available options and prices?"
