@@ -123,12 +123,29 @@ export type Tour = {
 
 export const tours: Tour[] = [
   {
-    id: "t1",
-    title: "Hiriketiya Beach",
-    subtitle: "Surf, swim, and chill in a perfect bay",
+    id: "t7",
+    title: "Yala National Park",
+    subtitle: "Wildlife safari with an early start",
     description:
-      "A relaxed beach stop with great sunsets, cafes, and easy vibes for a full day out.",
-    imageUrl: "/tours/hiriketiya_beach.webp",
+      "A memorable safari experience with a chance to spot elephants, birds, and more.",
+    imageUrl:
+      "/tours/yala.webp",
+  },
+  {
+    id: "t6",
+    title: "Ella",
+    subtitle: "Tea hills, viewpoints, and the hill-country train line",
+    description:
+      "A scenic day with fresh air, green slopes, and iconic photo spots.",
+    imageUrl: "/tours/ella.webp",
+  },
+  {
+    id: "t3",
+    title: "Nuwara Eliya",
+    subtitle: "Tea country, cool air, and beautiful landscapes",
+    description:
+      "Visit tea estates, enjoy calm weather, and take in green valleys on a smooth day trip.",
+    imageUrl: "/tours/nuwara_eliya.webp",
   },
   {
     id: "t2",
@@ -139,12 +156,12 @@ export const tours: Tour[] = [
     imageUrl: "/tours/kandy.webp",
   },
   {
-    id: "t3",
-    title: "Nuwara Eliya",
-    subtitle: "Tea country, cool air, and beautiful landscapes",
+    id: "t1",
+    title: "Hiriketiya Beach",
+    subtitle: "Surf, swim, and chill in a perfect bay",
     description:
-      "Visit tea estates, enjoy calm weather, and take in green valleys on a smooth day trip.",
-    imageUrl: "/tours/nuwara_eliya.webp",
+      "A relaxed beach stop with great sunsets, cafes, and easy vibes for a full day out.",
+    imageUrl: "/tours/hiriketiya_beach.webp",
   },
   {
     id: "t4",
@@ -161,23 +178,6 @@ export const tours: Tour[] = [
     description:
       "A longer escape to wide beaches and surf breaks, with flexible stops along the route.",
     imageUrl: "/tours/arugambay.webp",
-  },
-  {
-    id: "t6",
-    title: "Ella",
-    subtitle: "Tea hills, viewpoints, and the hill-country train line",
-    description:
-      "A scenic day with fresh air, green slopes, and iconic photo spots.",
-    imageUrl: "/tours/ella.webp",
-  },
-  {
-    id: "t7",
-    title: "Yala National Park",
-    subtitle: "Wildlife safari with an early start",
-    description:
-      "A memorable safari experience with a chance to spot elephants, birds, and more.",
-    imageUrl:
-      "/tours/yala.webp",
   },
   {
     id: "t8",
